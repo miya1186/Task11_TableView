@@ -15,7 +15,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    @IBAction func exit(segue:UIStoryboardSegue){}
+    
+    //関数exit内にデータを受け取る処理を追加
+     @IBAction func exit(segue:UIStoryboardSegue){
+       let PreVC = segue.source as? PrefecturesViewController
+       self.label.text = PreVC?.selectedPre
+    }
+    
     
     
 }
