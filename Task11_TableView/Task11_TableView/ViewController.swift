@@ -9,8 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet var label: UILabel!
+    
+    //privateで定義
+    @IBOutlet private var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,8 +19,9 @@ class ViewController: UIViewController {
     
     //関数exit内にデータを受け取る処理を追加
      @IBAction func exit(segue:UIStoryboardSegue){
-       let PreVC = segue.source as? PrefecturesViewController
-       self.label.text = PreVC?.selectedPre
+       //定数名変更
+       let prefecturesViewController = segue.source as? PrefecturesViewController
+       self.label.text = prefecturesViewController?.selectedPre
     }
     
     
