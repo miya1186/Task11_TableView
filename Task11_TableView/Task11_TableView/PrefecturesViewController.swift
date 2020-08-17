@@ -46,9 +46,6 @@ class PrefecturesViewController: UIViewController,UITableViewDelegate,UITableVie
         performSegue(withIdentifier: "Segue", sender: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let VC = segue.destination as! ViewController
-        VC.label.text = selectedPre
-    }
+//不要なコードを削除
     
 }
